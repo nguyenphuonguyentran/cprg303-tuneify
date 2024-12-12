@@ -1,7 +1,14 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Button,
+} from "react-native";
 import * as React from "react";
 import { Link } from "expo-router";
-const Settings = () => {
+const Settings = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: "black" }}>
       {/* Settings Heading */}
@@ -36,7 +43,9 @@ const Settings = () => {
       >
         {/* Option 1: Account */}
         <TouchableOpacity style={styles.accountParent} onPress={() => {}}>
-          <Text style={[styles.account, styles.accountTypo]}>Account</Text>
+          <Link href="../../settings-option/account">
+            <Text style={[styles.account, styles.accountTypo]}>Account</Text>
+          </Link>
           <Image
             style={[styles.vectorIcon, styles.vectorIconPosition]}
             resizeMode="cover"
@@ -46,7 +55,12 @@ const Settings = () => {
 
         {/* Option 2: Data Saver */}
         <TouchableOpacity style={styles.accountParent} onPress={() => {}}>
-          <Text style={[styles.account, styles.accountTypo]}>Data Saver</Text>
+          <Link
+            href="../../settings-option/datasaver"
+            style={[styles.account, styles.accountTypo]}
+          >
+            Data Saver
+          </Link>
           <Image
             style={[styles.vectorIcon, styles.vectorIconPosition]}
             resizeMode="cover"
@@ -56,7 +70,12 @@ const Settings = () => {
 
         {/* Option 3: Storage */}
         <TouchableOpacity style={styles.socialsParent} onPress={() => {}}>
-          <Text style={[styles.audioQuality, styles.accountTypo]}>Storage</Text>
+          <Link
+            href="../../settings-option/storage"
+            style={[styles.audioQuality, styles.accountTypo]}
+          >
+            Storage
+          </Link>
           <Image
             style={[styles.vectorIcon4, styles.vectorIconPosition]}
             resizeMode="cover"
