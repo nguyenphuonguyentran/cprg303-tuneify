@@ -1,7 +1,14 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Button,
+} from "react-native";
 import * as React from "react";
 import { Link } from "expo-router";
-const Settings = () => {
+const Settings = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: "black" }}>
       {/* Settings Heading */}

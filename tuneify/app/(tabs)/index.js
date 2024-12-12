@@ -1,3 +1,4 @@
+import { Text, View } from "react-native";
 const MainPage = () => {
   return (
     <View style={{ flex: 1, backgroundColor: "black" }}>
