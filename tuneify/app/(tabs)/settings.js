@@ -43,7 +43,9 @@ const Settings = ({ navigation }) => {
       >
         {/* Option 1: Account */}
         <TouchableOpacity style={styles.accountParent} onPress={() => {}}>
-          <Text style={[styles.account, styles.accountTypo]}>Account</Text>
+          <Link href="../../settings-option/account">
+            <Text style={[styles.account, styles.accountTypo]}>Account</Text>
+          </Link>
           <Image
             style={[styles.vectorIcon, styles.vectorIconPosition]}
             resizeMode="cover"
@@ -53,7 +55,12 @@ const Settings = ({ navigation }) => {
 
         {/* Option 2: Data Saver */}
         <TouchableOpacity style={styles.accountParent} onPress={() => {}}>
-          <Text style={[styles.account, styles.accountTypo]}>Data Saver</Text>
+          <Link
+            href="../../settings-option/datasaver"
+            style={[styles.account, styles.accountTypo]}
+          >
+            Data Saver
+          </Link>
           <Image
             style={[styles.vectorIcon, styles.vectorIconPosition]}
             resizeMode="cover"
@@ -63,7 +70,12 @@ const Settings = ({ navigation }) => {
 
         {/* Option 3: Storage */}
         <TouchableOpacity style={styles.socialsParent} onPress={() => {}}>
-          <Text style={[styles.audioQuality, styles.accountTypo]}>Storage</Text>
+          <Link
+            href="../../settings-option/storage"
+            style={[styles.audioQuality, styles.accountTypo]}
+          >
+            Storage
+          </Link>
           <Image
             style={[styles.vectorIcon4, styles.vectorIconPosition]}
             resizeMode="cover"

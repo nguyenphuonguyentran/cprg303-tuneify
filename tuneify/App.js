@@ -6,6 +6,7 @@ import MainPage from "./app/(tabs)/index";
 import Search from "./app/(tabs)/search";
 import Settings from "./app/(tabs)/settings";
 import Index from "./app/index";
+import Account from "./app/settings-option/account";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="Settings" components={Settings} />
         <Stack.Screen name="Login" components={Index} />
+        <Stack.Screen name="Account" components={Account} />
       </Stack.Navigator>
     </NavigationContainer>
   );

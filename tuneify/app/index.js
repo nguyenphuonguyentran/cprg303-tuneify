@@ -7,14 +7,13 @@ import {
   Image,
   TouchableOpacity,
   SafeAreaView,
+  Button,
 } from "react-native";
 import React, { useState } from "react";
 import { Link, useNavigation } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import tuneify from "../assets/tuneify.png";
-import { ScrollView } from "react-native-web";
-
 const Index = () => {
   // State variable to hold the password input
   const [password, setPassword] = useState("");
@@ -32,7 +31,7 @@ const Index = () => {
 
   return (
     // Application background
-    <ScrollView style={{ backgroundColor: "#000000" }}>
+    <View style={{ backgroundColor: "#000000" }}>
       <View style={styles.container}>
         {/* The Tuneify Logo */}
         <Image
@@ -78,7 +77,6 @@ const Index = () => {
               size={24}
               color="#fff"
             />
-
             {/* Password TextInput field */}
             <TextInput
               secureTextEntry={!showPassword}
@@ -106,7 +104,7 @@ const Index = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -170,6 +168,7 @@ const styles = StyleSheet.create({
     marginTop: 7,
     color: "#fff",
     fontFamily: "Host Grotesk",
+    alignItems: "stretch",
   },
   icon: {
     marginRight: 10,
