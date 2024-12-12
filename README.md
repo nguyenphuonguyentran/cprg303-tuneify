@@ -111,22 +111,22 @@ All architectural decisions for this project are documented in detail and are av
 - **Database Storage**: MongoDB Realm
 
 ## Security Recommendations
-- **Security Recommendations and Reasons of Choice**
+- **Security Recommendations and Reasons of Choice:**
 Our recommendation is to implement OAuth 2.0 authentication to securely handle user logins for the Tuneify app. We chose this because it ensures that user credentials are never stored in the app, and it leverages third-party authentication providers (like Google or Facebook), making it both secure and user-friendly. This is particularly relevant since the app will have a search functionality relying on APIs, and OAuth provides a secure method of verifying users without handling sensitive login details.
 
-- **People Benefitting the Recommendations**
+- **People Benefitting the Recommendations:**
 This recommendation primarily benefits the end-users, as it offers secure and easy authentication through trusted third-party providers. It also benefits the developer by simplifying the implementation of secure user authentication and reducing the burden of managing passwords and security features directly.
 
-- **References of the Security Recommendations**
+- **References of the Security Recommendations:**
 What is OAuth 2.0 and what does it do for you? - Auth0 (https://auth0.com/intro-to-iam/what-is-oauth-2)
 
-- **The Implementation of the Recommendations**
+- **The Implementation of the Recommendations:**
 OAuth 2.0 should be implemented as early as possible in the project, ideally before launching any user authentication feature. It is critical to handle user authentication securely to avoid risks related to password breaches, which could damage user trust.
 
-- **The Importance of the Recommendations to Tuneify**
+- **The Importance of the Recommendations to Tuneify:**
 Since Tuneify will have user login functionality, incorporating OAuth 2.0 is crucial to ensure that user data and credentials are securely managed. Without proper security mechanisms, the app may be vulnerable to attacks such as phishing or unauthorized access, which could lead to security breaches and a loss of user trust.
 
-- **The Application of the Recommendations**
+- **The Application of the Recommendations:**
 Implementing OAuth 2.0 can be done by integrating a package or SDK like Firebase Authentication or directly using OAuth libraries such as react-oauth for React. The implementation would involve configuring OAuth providers (e.g., Google, Facebook), setting up callback URLs, and securely handling tokens. Given the current structure of Tuneify, integrating this would be feasible as it relies on third-party API calls, and authentication via OAuth can be added with minimal disruption to existing functionality. The feasibility is high, as there are well-documented libraries and guides available for React and mobile applications.
 
 
